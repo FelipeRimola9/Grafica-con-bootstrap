@@ -67,12 +67,12 @@ body {
 
 #bg-contactos{
     position:relative;
-    top: -230px;
+    top: -250px;
 } 
 
  #seccion-contacto{
     background-color: #DC3545;
-    min-height:400px;
+    min-height:450px;
     position:relative;
 }
 
@@ -92,8 +92,38 @@ body {
     color: #3f3f3f;
 }
 
+/*=========================BOTÓN WHATSAPP================================*/
+.container-boton{
+    background-color: #2e6329;
+    border: 1px solid #fff;
+    position: fixed;
+    z-index: 999;
+    border-radius: 50%;
+    bottom: 20px;
+    right: 25px;
+    padding: 15px;
+    transition: ease 0.3s;
+    animation: efecto 1.2s infinite;
+}
 
+.container-boton:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
 
+.boton{
+    width: 40px;
+    transition: ease 1s;
+}
+
+@keyframes efecto{
+    0%{
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.85);
+    }
+    100%{
+        box-shadow: 0 0 0 25px rgba(0, 0, 0, 0);
+    }
+}
 
 /*=========================FOOTER================================*/
 
@@ -111,7 +141,7 @@ footer p{
     color:#f3f3f3;
 }
 
-/*=========================MEDIA QUERIES PANTALLA ANCHA================================*/
+/*=========================MEDIA QUERIES PANTALLA EXTRA LARGE================================*/
 
 @media (max-width:1200px){
     #intro, #equipo {
@@ -128,9 +158,34 @@ footer p{
     margin:auto;
     padding-top:50px;    
    }
- 
+   #bg-contactos{
+    top: -120px;
 }
-/*=========================MEDIA QUERIES PANTALLA SM================================*/
+
+}
+/*=========================MEDIA QUERIES PANTALLA LARGE================================*/
+
+@media (max-width:992px){
+    #intro, #equipo {
+        width:90% !important;
+        margin:auto;
+    }
+  
+    #local {
+        flex-wrap: wrap;
+        padding-top:30px;
+   }
+   .wrapper-local {
+    width:90%;
+    margin:auto;
+    padding-top:50px;    
+   }
+   #bg-contactos{
+    top: -120px;
+}
+
+}
+/*=========================MEDIA QUERIES PANTALLA MEDIUM================================*/
 
 
 @media (max-width:768px) {
